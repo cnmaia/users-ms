@@ -1,7 +1,13 @@
 package br.mack.service.impl;
 
+import br.mack.controller.dto.UserRequest;
+import br.mack.exception.ValidationException;
 import br.mack.model.User;
+import br.mack.repository.UserRepository;
 import br.mack.service.UserService;
+import org.apache.commons.validator.routines.EmailValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;

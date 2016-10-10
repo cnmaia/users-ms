@@ -1,5 +1,6 @@
 package br.mack.service;
 
+import br.mack.controller.dto.UserRequest;
 import br.mack.model.User;
 
 import java.util.List;
