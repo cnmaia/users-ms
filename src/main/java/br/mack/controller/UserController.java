@@ -1,6 +1,7 @@
 package br.mack.controller;
 
 import br.mack.controller.dto.UserRequest;
+import br.mack.model.User;
 import br.mack.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,7 +30,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity find(@PathVariable("id") Long id) {
+    public ResponseEntity<User> find(@PathVariable("id") Long id) {
         return new ResponseEntity(userService.find(id), HttpStatus.OK);
     }
 }
