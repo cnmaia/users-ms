@@ -23,4 +23,12 @@ public interface UserService {
      * @return the list
      */
     List<User> list();
+
+    /**
+     * Find user.
+     *
+     * @param id the id
+     * @return the user
+     */
+    User find(Long id);
 }

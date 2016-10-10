@@ -35,6 +35,11 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
+    @Override
+    public User find(Long id) {
+        return userRepository.findOne(id);
+    }
+
     private void validate(UserRequest user) {
         Map<String, String> validationErrors = new HashMap<String, String>();
 
